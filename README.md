@@ -2,6 +2,8 @@
 
 A boilerplate template for Spring Boot applications with Supabase integration.
 
+> **📖 New to this template?** Start with [GETSTARTED.md](GETSTARTED.md) for instructions on how to clone this template and create your own repository. This is a read-only template - you should not push changes to this repository.
+
 ## Features
 
 - **Java 21** with Spring Boot 3.5.7
