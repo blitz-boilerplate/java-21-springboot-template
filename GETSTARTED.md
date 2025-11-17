@@ -158,10 +158,51 @@ The template includes a generic application class name that you should rename to
 
 The application will start on `http://localhost:8080`
 
+### Step 4: Test the HelloWorld Endpoint (Optional)
+
+This template includes a `HelloWorldController` as a simple example to verify your API is working. This is a learning example and should be deleted once you start building your actual application.
+
+**What it does:**
+- Accepts a POST request with a JSON body containing a `name` field
+- Returns a greeting message: "hi.. {name}"
+
+**Test it with Postman:**
+1. Open Postman (or any HTTP client)
+2. Create a new POST request to: `http://localhost:8080/api/hello`
+3. Set the Content-Type header to: `application/json`
+4. Add this JSON body:
+   ```json
+   {
+     "name": "YourName"
+   }
+   ```
+5. Send the request - you should receive: `"hi.. YourName"`
+
+**Test it from a frontend:**
+```javascript
+fetch('http://localhost:8080/api/hello', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ name: 'YourName' })
+})
+  .then(response => response.text())
+  .then(data => console.log(data)); // Output: "hi.. YourName"
+```
+
+**Note:** This controller is included as a learning example to help you understand:
+- How to create REST controllers
+- How to accept JSON request bodies using DTOs
+- How to return responses
+
+Once you understand how it works, you should delete `HelloWorldController.java` and `HelloWorldDto.java` and create your own controllers for your application.
+
 ## Understanding the Template Structure
 
 This template includes:
 
+- **HelloWorldController** - Example REST controller showing how to create API endpoints (should be deleted after learning)
 - **SupabaseClient** - REST client for Supabase authentication (register/login)
 - **UserProfile Entity** - Example entity showing how to link your data with Supabase Auth
 - **SecurityConfig** - CORS configuration (allows all traffic for learning purposes)
