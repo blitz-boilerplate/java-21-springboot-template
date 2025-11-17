@@ -8,36 +8,7 @@ This is a **template repository** - a boilerplate starter project for building S
 
 ## How to Use This Template
 
-There are three ways to get started with this template:
-
-### Option 1: Clone in IntelliJ IDEA (Easiest)
-
-This is the easiest way if you're using IntelliJ IDEA:
-
-1. **Open IntelliJ IDEA**
-
-2. **Select "Get from VCS"** (or File → New → Project from Version Control)
-
-3. **Enter the repository URL:**
-   ```
-   https://github.com/blitz-boilerplate/java-21-springboot-template.git
-   ```
-
-4. **Choose a directory** where you want to clone the project
-
-5. **Click "Clone"** - IntelliJ will clone the repository and automatically detect it as a Maven project
-
-6. **Wait for Maven to sync** - IntelliJ will download dependencies automatically
-
-7. **Create your own repository on GitHub:**
-   - Go to GitHub and create a new repository (don't initialize it)
-   - In IntelliJ, go to VCS → Git → Remotes
-   - Change the remote URL to your new repository
-   - Push your code: VCS → Git → Push
-
-**Note:** Since this is a template, you'll want to change the remote URL to point to your own repository after cloning.
-
-### Option 2: Use GitHub's Template Feature, Then Clone in IntelliJ
+### Use GitHub's Template Feature, Then Clone in IntelliJ
 
 This creates your own repository first, then clones it:
 
@@ -58,43 +29,6 @@ This creates your own repository first, then clones it:
    - Select "Get from VCS"
    - Enter your new repository URL: `https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`
    - Click "Clone"
-
-### Option 3: Clone Using Git Commands
-
-If you prefer using command line:
-
-1. **Use GitHub's Template Feature** (same as Option 2, steps 1-3)
-
-2. **Clone your new repository:**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   cd YOUR_REPO_NAME
-   ```
-
-**Or clone directly and create your own repository:**
-
-1. **Clone this template:**
-   ```bash
-   git clone https://github.com/blitz-boilerplate/java-21-springboot-template.git
-   cd java-21-springboot-template
-   ```
-
-2. **Remove the existing git history:**
-   ```bash
-   rm -rf .git
-   ```
-
-3. **Initialize a new git repository:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit from template"
-   ```
-
-4. **Create a new repository on GitHub** (via web interface or `gh` CLI):
-   ```bash
-   gh repo create YOUR_REPO_NAME --public --source=. --remote=origin --push
-   ```
 
 ## Next Steps After Creating Your Repository
 

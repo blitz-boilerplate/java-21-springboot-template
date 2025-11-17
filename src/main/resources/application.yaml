@@ -2,29 +2,39 @@ spring:
   application:
     name: java-21-springboot-template
   
-  datasource:
-    # Supabase database connection format:
-    # For connection pooling (recommended): jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres
-    # For direct connection: jdbc:postgresql://db.xxxxx.supabase.co:5432/postgres
-    # Username format: postgres.bydefmabchistvvzdvun (found in Supabase dashboard → Settings → Database)
-    # Password: Your database password from Supabase
-    url: jdbc:postgresql://${SUPABASE_DB_HOST:db.xxxxx.supabase.co}:${SUPABASE_DB_PORT:5432}/${SUPABASE_DB_NAME:postgres}
-    username: ${SUPABASE_DB_USER:postgres}
-    password: ${SUPABASE_DB_PASSWORD:your-password}
-    driver-class-name: org.postgresql.Driver
+  # Exclude database auto-configuration when no database is configured
+  # Remove this section when you have a database set up
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
   
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: false
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
+  # Database configuration disabled - uncomment when you have a database set up
+  # datasource:
+  #   # Supabase database connection format:
+  #   # For connection pooling (recommended): jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres
+  #   # For direct connection: jdbc:postgresql://db.xxxxx.supabase.co:5432/postgres
+  #   # Username format: postgres.bydefmabchistvvzdvun (found in Supabase dashboard → Settings → Database)
+  #   # Password: Your database password from Supabase
+  #   url: jdbc:postgresql://${SUPABASE_DB_HOST:db.xxxxx.supabase.co}:${SUPABASE_DB_PORT:5432}/${SUPABASE_DB_NAME:postgres}
+  #   username: ${SUPABASE_DB_USER:postgres}
+  #   password: ${SUPABASE_DB_PASSWORD:your-password}
+  #   driver-class-name: org.postgresql.Driver
+  
+  # JPA configuration disabled - uncomment when you have a database set up
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: false
+  #   properties:
+  #     hibernate:
+  #       dialect: org.hibernate.dialect.PostgreSQLDialect
+  #       format_sql: true
 
-supabase:
-  url: ${SUPABASE_URL:https://xxxxx.supabase.co}
-  anon-key: ${SUPABASE_ANON_KEY:your-anon-key-here}
+# Supabase configuration disabled - uncomment when you have Supabase set up
+# supabase:
+#   url: ${SUPABASE_URL:https://xxxxx.supabase.co}
+#   anon-key: ${SUPABASE_ANON_KEY:your-anon-key-here}
 
 server:
   port: 8080
