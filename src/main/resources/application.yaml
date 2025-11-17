@@ -12,12 +12,12 @@ spring:
   # Database configuration disabled - uncomment when you have a database set up
   # datasource:
   #   # Supabase database connection format:
-  #   # For connection pooling (recommended): jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres
+  #   # For connection pooling (recommended): jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres?sslMode=require
   #   # For direct connection: jdbc:postgresql://db.xxxxx.supabase.co:5432/postgres
   #   # Username format: postgres.bydefmabchistvvzdvun (found in Supabase dashboard → Settings → Database)
   #   # Password: Your database password from Supabase
   #   url: jdbc:postgresql://${SUPABASE_DB_HOST:db.xxxxx.supabase.co}:${SUPABASE_DB_PORT:5432}/${SUPABASE_DB_NAME:postgres}
-  #   username: ${SUPABASE_DB_USER:postgres}
+  #   username: ${SUPABASE_DB_USER:postgres.somestring}
   #   password: ${SUPABASE_DB_PASSWORD:your-password}
   #   driver-class-name: org.postgresql.Driver
   
