@@ -138,13 +138,15 @@ The template includes a generic application class name that you should rename to
    - Set `supabase.url` - Your Supabase project URL
    - Set `supabase.anon-key` - Your Supabase anonymous key
    - Configure database connection settings:
-     - `SUPABASE_DB_HOST` - Your database host
-     - `SUPABASE_DB_PORT` - Usually 5432
-     - `SUPABASE_DB_NAME` - Usually "postgres"
-     - `SUPABASE_DB_USER` - Your database user
-     - `SUPABASE_DB_PASSWORD` - Your database password
+     - **Database URL format:**
+       - For connection pooling (recommended): `jdbc:postgresql://aws-0-eu-central-1.pooler.supabase.com:6543/postgres`
+       - For direct connection: `jdbc:postgresql://db.xxxxx.supabase.co:5432/postgres`
+       - Find your connection string in Supabase Dashboard → Settings → Database
+     - **Username format:** `postgres.bydefmabchistvvzdvun` (includes the project reference ID)
+     - **Password:** Your database password (set when creating the Supabase project)
+     - **Port:** `6543` for pooler, `5432` for direct connection
 
-   You can set these as environment variables or directly in the `application.yaml` file.
+   You can set these as environment variables or directly in the `application.yaml` file. See the comments in `application.yaml` for format examples.
 
 **Note:** Hibernate is configured with `ddl-auto: update`, which means it will automatically create and update database tables based on your entity classes. You don't need to manually create tables - just run the application and Hibernate will handle it!
 
