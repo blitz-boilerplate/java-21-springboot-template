@@ -146,22 +146,9 @@ The template includes a generic application class name that you should rename to
 
    You can set these as environment variables or directly in the `application.yaml` file.
 
-### Step 3: Set Up the Database
+**Note:** Hibernate is configured with `ddl-auto: update`, which means it will automatically create and update database tables based on your entity classes. You don't need to manually create tables - just run the application and Hibernate will handle it!
 
-1. **Create the `user_profiles` table** in your Supabase database:
-   ```sql
-   CREATE TABLE user_profiles (
-       supabase_user_id UUID PRIMARY KEY,
-       email VARCHAR(255) NOT NULL UNIQUE,
-       display_name VARCHAR(255),
-       created_at TIMESTAMP NOT NULL,
-       updated_at TIMESTAMP
-   );
-   ```
-
-   Or use Supabase's SQL Editor to run this migration.
-
-### Step 4: Run the Application
+### Step 3: Run the Application
 
 ```bash
 ./mvnw spring-boot:run
