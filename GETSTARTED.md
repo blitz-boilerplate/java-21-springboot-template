@@ -8,11 +8,38 @@ This is a **template repository** - a boilerplate starter project for building S
 
 ## How to Use This Template
 
-There are two ways to get started with this template:
+There are three ways to get started with this template:
 
-### Option 1: Use GitHub's Template Feature (Recommended)
+### Option 1: Clone in IntelliJ IDEA (Easiest)
 
-This is the easiest way to create your own project from this template:
+This is the easiest way if you're using IntelliJ IDEA:
+
+1. **Open IntelliJ IDEA**
+
+2. **Select "Get from VCS"** (or File → New → Project from Version Control)
+
+3. **Enter the repository URL:**
+   ```
+   https://github.com/blitz-boilerplate/java-21-springboot-template.git
+   ```
+
+4. **Choose a directory** where you want to clone the project
+
+5. **Click "Clone"** - IntelliJ will clone the repository and automatically detect it as a Maven project
+
+6. **Wait for Maven to sync** - IntelliJ will download dependencies automatically
+
+7. **Create your own repository on GitHub:**
+   - Go to GitHub and create a new repository (don't initialize it)
+   - In IntelliJ, go to VCS → Git → Remotes
+   - Change the remote URL to your new repository
+   - Push your code: VCS → Git → Push
+
+**Note:** Since this is a template, you'll want to change the remote URL to point to your own repository after cloning.
+
+### Option 2: Use GitHub's Template Feature, Then Clone in IntelliJ
+
+This creates your own repository first, then clones it:
 
 1. **Click the "Use this template" button** on the GitHub repository page
    - You'll find this button at the top right of the repository page
@@ -26,15 +53,25 @@ This is the easiest way to create your own project from this template:
 
 3. **Click "Create repository"** - GitHub will create a new repository with all the template code
 
-4. **Clone your new repository:**
+4. **Clone in IntelliJ IDEA:**
+   - Open IntelliJ IDEA
+   - Select "Get from VCS"
+   - Enter your new repository URL: `https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git`
+   - Click "Clone"
+
+### Option 3: Clone Using Git Commands
+
+If you prefer using command line:
+
+1. **Use GitHub's Template Feature** (same as Option 2, steps 1-3)
+
+2. **Clone your new repository:**
    ```bash
    git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
    cd YOUR_REPO_NAME
    ```
 
-### Option 2: Clone and Create Your Own Repository
-
-If you prefer to clone directly:
+**Or clone directly and create your own repository:**
 
 1. **Clone this template:**
    ```bash
